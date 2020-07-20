@@ -1,16 +1,41 @@
 <template>
-  <h1>TODOLIST Template</h1>
+  <div class="container">
+    <div class="row">
+      <div class="col-12"><p class="display-3">Vue crash course</p></div>
+    </div>
+    <div class="row">
+      <p>Add create form</p>
+    </div>
+    <div class="row">
+      <div class="col-12 col-lg-6">
+        <ul class="list-group">
+          <Todo
+            v-for="(todo, index) in todos"
+            :key="index"
+            :todoString="todo.todoString"
+            :completed="todo.completed"
+          />
+        </ul>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
+import Todo from "./Todo";
 export default {
+  components: {
+    Todo,
+  },
   data() {
-    todos: [
-      { todoString: "Complete SPM assignment", completed: false },
-      { todoString: "Cook some food", completed: true },
-      { todoString: "Wash car", completed: false },
-      { todoString: "Feed birds", completed: true },
-    ];
+    return {
+      todos: [
+        { todoString: "Complete SPM assignment", completed: false },
+        { todoString: "Cook some food", completed: true },
+        { todoString: "Wash car", completed: false },
+        { todoString: "Feed birds", completed: true },
+      ],
+    };
   },
   methods: {
     addTodo(newTodo) {
