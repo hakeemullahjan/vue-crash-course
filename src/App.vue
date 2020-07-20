@@ -1,12 +1,21 @@
 <template>
-  <h1>Hello from HAKEEMULLAH</h1>
+  <div>
+    <h1>Hello from HAKEEMULLAH</h1>
+    <TodoList />
+  </div>
 </template>
 
 <script>
-export default {};
+import TodoList from "./components/TodoList.vue";
+export default {
+  name: "App",
+  components: {
+    TodoList,
+  },
+};
 </script>
 
-<style >
+<style>
 body {
   background-color: rgb(66, 66, 66);
   color: aliceblue;
