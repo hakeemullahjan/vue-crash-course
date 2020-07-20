@@ -30,7 +30,7 @@ export default {
   data() {
     return {
       todos: [
-        { todoString: "Complete SPM assignment", completed: false },
+        { todoString: "Complete assignment", completed: false },
         { todoString: "Cook some food", completed: true },
         { todoString: "Wash car", completed: false },
         { todoString: "Feed birds", completed: true },
