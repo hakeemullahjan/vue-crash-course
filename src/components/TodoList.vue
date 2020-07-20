@@ -14,6 +14,9 @@
             :key="index"
             :todoString="todo.todoString"
             :completed="todo.completed"
+            @on-delete="deleteTodo(todo)"
+            @on-toggle="toggleTodo(todo)"
+            @on-edit="editTodo(todo, $event)"
           />
         </ul>
       </div>
